@@ -31,6 +31,9 @@
 {
     NSLog(@"Launching Couchbase Lite...");
     CBLManager* dbmgr = [CBLManager sharedInstance];
+
+    [dbmgr.customHTTPHeaders setObject:@"*" forKey:@"Access-Control-Allow-Origin"];
+}
     CBLRegisterJSViewCompiler();
 #if 1
     // Couchbase Lite 1.0's CBLRegisterJSViewCompiler function doesn't register the filter compiler
@@ -41,6 +44,6 @@
 #endif
     self.liteURL = dbmgr.internalURL;
     NSLog(@"Couchbase Lite url = %@", self.liteURL);
-}
+
 
 @end
