@@ -17,7 +17,7 @@ You install Couchbase Lite into your PhoneGap app using [the PhoneGap command li
 npm install -g phonegap
 phonegap create MyPhoneGapApp
 cd MyPhoneGapApp/
-phonegap local plugin add https://github.com/couchbaselabs/Couchbase-Lite-PhoneGap-Plugin.git
+phonegap local plugin add https://github.com/AlexisReverte/Couchbase-Lite-PhoneGap-Plugin.git
 phonegap run $PLATFORM
 ```
 
