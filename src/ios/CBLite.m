@@ -33,6 +33,9 @@
     CBLManager* dbmgr = [CBLManager sharedInstance];
 
     [dbmgr.customHTTPHeaders setObject:@"*" forKey:@"Access-Control-Allow-Origin"];
+    [dbmgr.customHTTPHeaders setObject:@"GET, PUT, POST, DELETE, OPTIONS" forKey:@"Access-Control-Allow-Methods"];
+    [dbmgr.customHTTPHeaders setObject:@"Origin, X-Requested-With, Content-Type, Accept, Authorization" forKey:@"Access-Control-Allow-Headers"];
+
 
     CBLRegisterJSViewCompiler();
 #if 1
